@@ -1,0 +1,75 @@
+.modal_basket_menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.modal_basket_menu.active body {
+  overflow: hidden;
+}
+
+.basket_menu_content {
+  display: flex;
+  height: 100%;
+}
+
+.basket_menu_items {
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+}
+.basket_menu_items .spinner {
+  margin-top: 50px !important;
+}
+.basket_menu_items::-webkit-scrollbar {
+  display: none;
+}
+
+.basket_buy_options {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 20px;
+  background-color: white;
+  width: 100%;
+  height: 19%;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.basket_buy_options button {
+  width: 92%;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #283c28;
+  color: white;
+  cursor: pointer;
+  border: 1px solid #283c28;
+  transition: all 0.3s ease;
+}
+.basket_buy_options button:hover {
+  background-color: white;
+  color: #283c28;
+  transition: all 0.3s ease;
+}
+.basket_buy_options .all_price {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 20px 0;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.empty_basket {
+  width: 80%;
+  font-weight: 600;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: white;
+  color: #283c28;
+  border: 1px solid #283c28;
+}
+
+/*# sourceMappingURL=modalBasketMenu.css.map */

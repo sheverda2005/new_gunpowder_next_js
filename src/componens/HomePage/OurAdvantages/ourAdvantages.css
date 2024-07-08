@@ -1,0 +1,117 @@
+.our_advantages {
+  background-color: #fbf9f3;
+  margin: 40px 0;
+  padding: 50px 0;
+  width: 100%;
+}
+
+.our_advantages_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.our_advantages_content p {
+  font-weight: 500;
+}
+
+.our_advantages_item {
+  width: 33%;
+  background-color: #E5DBCF;
+  padding: 40px;
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+.our_advantages_item:hover {
+  transition: all 0.3s ease;
+  transform: scale(1.05);
+}
+
+.our_advantages_item.high_quality {
+  clip-path: polygon(0 0%, 0% 1000%, 100% 0);
+}
+.our_advantages_item.convenience_of_shopping {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(11.5% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+.our_advantages_item.convenience_of_shopping .our_advantages_item_content {
+  width: 85%;
+}
+
+.our_advantages_item.expert_knowledge {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  clip-path: polygon(10.5% 0%, 100% 0%, 1000% 100%, 0% 100%);
+}
+.our_advantages_item.expert_knowledge .our_advantages_item_content {
+  width: 85%;
+}
+
+.title_our_advantages_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.title_our_advantages_item h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+}
+.title_our_advantages_item img {
+  margin-right: 10px;
+  max-height: 30px;
+}
+
+@media (max-width: 900px) {
+  .our_advantages_content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .our_advantages_content .our_advantages_item {
+    clip-path: none;
+    width: 80%;
+    margin: 10px 0;
+  }
+  .our_advantages_content .convenience_of_shopping {
+    display: block;
+  }
+  .our_advantages_content .our_advantages_item.expert_knowledge {
+    display: block;
+  }
+}
+@media (max-width: 425px) {
+  .our_advantages_item.convenience_of_shopping .our_advantages_item_content {
+    width: 100%;
+  }
+  .our_advantages_item.expert_knowledge .our_advantages_item_content {
+    width: 100%;
+  }
+  .our_advantages {
+    margin: 0;
+  }
+  .our_advantages_content {
+    width: 100%;
+  }
+  .our_advantages_content .our_advantages_content .our_advantages_item {
+    margin: 5px 0;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+  }
+  .title_our_advantages_item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .our_advantages_content p {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=ourAdvantages.css.map */

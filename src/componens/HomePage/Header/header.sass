@@ -1,0 +1,131 @@
+header
+  margin: 30px 0
+
+.header_wrapper
+  background-color: #283c28
+  display: flex
+  justify-content: space-between
+  align-items: start
+  .header_options
+    width: 25%
+    ul
+      list-style-type: none
+      padding: 0
+      margin: 30px
+      li
+        padding: 12px 0
+        color: white
+        font-weight: bold
+        text-transform: uppercase
+        font-size: 14px
+        transition: all 0.3s ease
+        cursor: pointer
+        &:hover
+          color: #c5c5c5
+          transition: all 0.3s ease
+        span
+          margin-left: 10px
+        .border_gradient
+          height: 1px
+          width: 98%
+          margin-top: 10px
+          background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 10%, #ffffff 90%, rgba(255, 255, 255, 0) 100%)
+  .header_slider
+    width: 75%
+    background-image: url("/image/banner-1.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+
+
+.header_slider
+  display: flex
+  justify-content: center
+  align-items: center
+
+.header_slider_wrapper
+  height: 100%
+  width: 100%
+  padding: 200px 0
+  background-color: rgba(0, 0, 0, 0.3)
+
+.header_slider_content
+  margin-left: 12%
+  color: #fff
+  h1
+    font-size: 50px
+    text-transform: uppercase
+    line-height: 125%
+    font-weight: 400
+  p
+    margin-top: 15px
+    font-size: 18px
+    width: 80%
+  button
+    margin-top: 20px
+    font-weight: bold
+    text-transform: uppercase
+    background: rgb(229, 219, 207)
+    border: 1px solid rgb(229, 219, 207)
+    font-size: 14px
+    padding: 13px 23px
+    color: #283c28
+    cursor: pointer
+    line-height: 110%
+    transition: all 0.3s ease
+    &:hover
+      color: white
+      background: none
+      transition: all 0.3s ease
+
+@media (max-width: 1241px)
+  .header_wrapper
+    .header_options
+      width: 30%
+      ul
+        margin: 20px
+
+@media (max-width: 900px)
+  .header_wrapper
+    .header_options
+      width: 35%
+      ul
+        margin: 20px
+  .header_slider_content
+    margin-left: 5%
+    h1
+      font-size: 45px
+    p
+      font-size: 16px
+
+@media (max-width: 768px)
+  .container.header
+    margin: 0
+  .header_wrapper
+    .header_options
+      display: none
+      width: 0
+    .header_slider
+      width: 100%
+    .header_slider_content
+      margin-left: 15%
+  .header_slider_wrapper
+    padding: 130px 0
+
+@media (max-width: 635px)
+  .header_wrapper
+    .header_slider_content
+      margin-left: 0
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      text-align: center
+      p
+        width: 95%
+
+@media (max-width: 520px)
+  .header_slider_content
+    h1
+      font-size: 35px
+  .header_slider_wrapper
+    padding: 100px 0

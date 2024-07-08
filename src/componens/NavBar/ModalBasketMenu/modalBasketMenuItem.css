@@ -1,0 +1,51 @@
+.modal_basket_menu_item_content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(34, 34, 34, 0.1019607843);
+}
+.modal_basket_menu_item_content img {
+  height: 160px;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.basket_menu_content {
+  width: 100%;
+}
+
+.basket_menu_items {
+  width: 100%;
+}
+
+.modal_basket_menu_item_content_info {
+  width: 80%;
+}
+.modal_basket_menu_item_content_info .price_count {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.modal_basket_menu_item_content_info .price_count .count {
+  display: flex;
+}
+.modal_basket_menu_item_content_info .price_count .count span {
+  margin: 0px 2px;
+}
+
+.basket_delete {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: underline;
+  margin: 7px 0;
+}
+
+.modal_basket_menu_item_content_info .price_count {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=modalBasketMenuItem.css.map */

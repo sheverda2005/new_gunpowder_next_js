@@ -1,0 +1,268 @@
+.contact_panel
+  background-color: #283c28
+  padding: 7px 0
+  font-size: 16px
+  color: white
+  word-break: break-word
+  word-wrap: break-word
+  overflow-wrap: break-word
+  white-space: nowrap
+
+.logo_main_menu_item
+  width: 20%
+.container.contact_panel
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.contact_info
+  display: flex
+
+.contact_number
+  margin: 0 10px
+  display: flex
+  align-items: center
+  transition: all 0.3s ease
+  img
+    max-height: 20px
+    margin: 0 10px
+  &:hover
+    color: #d2d2d2
+    transition: all 0.3s ease
+
+.contact_email
+  margin: 0 10px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  transition: all 0.3s ease
+  img
+    max-height: 20px
+    margin: 0 10px
+  &:hover
+    color: #d2d2d2
+    transition: all 0.3s ease
+
+.contact_user_data
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .user_data_link
+    margin: 0 10px
+    display: flex
+    align-items: center
+    transition: all 0.3s ease
+    &:hover
+      color: #d2d2d2
+      transition: all 0.3s ease
+    img
+      max-height: 20px
+      margin: 0 10px
+
+
+.user_data_link.profil_link
+  cursor: pointer
+
+.main_menu
+  background-color: #fbf9f3
+  padding: 10px 0
+  .container.main_menu
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .main_menu_logo
+      width: 100%
+  .main_logo
+    p
+      color: #283c28
+      font-size: 30px
+      font-family: "Jost", sans-serif
+  ul
+    list-style-type: none
+    display: flex
+    li
+      margin: 0 10px
+      color: #1d1d1d
+      font-size: 14px
+      font-weight: 500
+      font-family: "Jost", sans-serif
+      text-transform: uppercase
+      transition: all 0.3s ease
+      &:hover
+        color: #575757
+        transition: all 0.3s ease
+
+.down_arrow
+  max-height: 10px
+  margin-left: 5px
+
+.li_drop_down
+  display: flex
+  align-items: center
+  cursor: pointer
+  transition: all 0.5s ease
+  img
+    transform: rotate(0turn)
+    transition: all 0.5s ease
+  &:hover
+    img
+      transform: rotate(0.5turn)
+      transition: all 0.5s ease
+
+.menu_search
+  cursor: pointer
+  img
+    max-height: 20px
+
+.menu_search
+  display: flex
+  align-items: center
+  font-size: 16px
+  font-weight: 500
+  font-family: "Jost", sans-serif
+  img
+    margin: 0 10px
+
+.menu_basket
+  cursor: pointer
+  img
+    max-height: 30px
+    margin-top: 5px
+
+.search_basket
+  display: flex
+  align-items: center
+  justify-content: end
+  width: 15%
+
+.li_drop_down
+  &:hover
+    .drop_down_menu_content
+      display: block
+
+menu
+  display: flex
+  width: 65%
+  justify-content: center
+  ul
+    width: 100%
+    display: flex
+    justify-content: center
+
+.drop_down_menu
+  position: absolute
+  background: none
+.drop_down_menu_content
+  margin-top: 200px
+  display: none
+  background-color: white
+  text-transform: none
+  width: 150px
+  font-size: 15px
+  font-weight: 500
+  color: black
+  &:hover
+    color: black
+    display: block
+  .drop_down_menu_item
+    padding: 15px 10px
+    background-color: white
+    &:hover
+      background-color: #E5DBCF
+
+.auth_form
+  display: flex
+  flex-direction: column
+  button
+    margin-top: 15px
+    padding: 13px 23px
+    color: white
+    background-color: #283c28
+    border: 1px solid #283c28
+    font-size: 14px
+    font-weight: 600
+    letter-spacing: 0.5px
+    cursor: pointer
+    text-transform: uppercase
+    transition: all 0.3s ease
+    &:hover
+      background-color: white
+      color: #283c28
+      transition: all 0.3s ease
+
+.auth_menu_form_email_item
+  display: flex
+  flex-direction: column
+  margin-bottom: 20px
+  label
+    margin-bottom: 7px
+
+.auth_menu_form_password_item
+  display: flex
+  flex-direction: column
+  label
+    margin-bottom: 7px
+
+
+@media (max-width: 900px)
+  .menu_search
+    display: none
+  .search_basket
+    margin: 0 7px
+    display: flex
+    justify-content: end
+
+@media (max-width: 850px)
+  .contact_email
+    display: none
+  .user_data_link.comparison_link
+    display: none
+  .user_data_link.chosen_link
+    display: none
+  .main_menu
+    .logo_main_menu_item
+      width: 40%
+  .search_basket
+    width: 10%
+  menu
+    display: flex
+    justify-content: center
+    width: 80%
+
+@media (max-width: 640px)
+  .main_menu
+    .logo_main_menu_item
+      a
+        display: none
+  menu
+    display: none
+  .contact_number
+    margin: 0
+  .main_menu_logo
+    display: none
+
+
+@media (max-width: 530px)
+  .main_menu
+    .logo_main_menu_item
+      width: 150px
+
+
+@media (max-width: 425px)
+  .container.contact_panel
+    margin: 0
+
+
+a
+  text-decoration: none
+  color: white
+
+.main_menu
+  a
+    font-family: Jost, sans-serif
+    font-size: 14px
+    font-weight: 500
+    color: #1d1d1d
+    &:hover
+      color: #575757
+      transition: all 0.3s ease

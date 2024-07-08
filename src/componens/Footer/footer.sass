@@ -1,0 +1,150 @@
+footer
+  margin-top: 50px
+  background-color: #fbf9f3
+  padding: 50px 0 20px 0
+
+.footer_content
+  width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: start
+
+
+.footer_item
+  width: 25%
+  p
+    font-size: 20px
+    font-weight: 500
+  ul
+    list-style: none
+    margin-top: 10px
+    a
+      color: #1d1d1d
+      transition: all 0.3s ease
+      &:hover
+        color: #575757
+        transition: all 0.3s ease
+    li
+      padding: 7px 0
+      font-size: 16px
+      display: flex
+      align-items: center
+      img
+        max-height: 18px
+        margin-right: 10px
+    .footer_method_of_pay
+      margin-top: 10px
+      img
+        max-height: 15px
+
+
+.footer_logo
+  img
+    width: 250px
+    margin-bottom: 5px
+
+.footer_social_links
+  margin-top: 10px
+  display: flex
+
+.footer_social_link_item
+  width: 33px
+  height: 33px
+  background: rgb(220, 205, 190)
+  margin-right: 20px
+  display: flex
+  justify-content: center
+  align-items: center
+  img
+    height: 20px
+
+.footer_name_of_shop
+  margin-top: 30px
+  border-top: 1px solid #ebebeb
+  padding: 20px 0 0 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.footer_item
+  ul
+    li
+      white-space: break-spaces
+
+.footer_name_of_shop_item.currency
+  display: flex
+  .footer_name_of_shop_item_UAN
+    margin-right: 7px
+    border-right: 1px solid #000
+    padding-right: 7px
+    font-size: 15px
+    color: rgba(29, 29, 29, 0.7)
+    font-weight: 600
+  .footer_name_of_shop_item_USD
+    font-size: 15px
+
+.footer_links_content_items
+  display: flex
+  width: 70%
+  justify-content: space-between
+
+.footer_logo_social_info
+  width: 30%
+
+.footer_social_links
+  width: 400px
+
+@media (max-width: 1180px)
+  .footer_links_content_items
+    white-space: nowrap
+    margin-right: 30px
+    justify-content: end
+    width: 70%
+    .footer_item
+      margin: 0 40px
+
+@media (max-width: 1118px)
+  .footer_links_content_items
+    .footer_item
+      width: 60%
+
+@media (max-width: 850px)
+  .footer_content
+    flex-direction: column
+  .footer_links_content_items
+    margin: 30px 0 0 0
+    width: 100%
+    display: flex
+    justify-content: space-around
+    .footer_item
+      margin:  0 10px
+  .footer_logo_social_info
+    text-align: center
+    display: flex
+    width: 100%
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  .footer_social_links
+    display: flex
+    justify-content: center
+
+@media (max-width: 650px)
+  .footer_social_link_item
+    margin: 0 10px
+  .footer_links_content_items
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    text-align: center
+    .footer_item
+      width: 100%
+      margin-bottom: 30px
+      ul
+        li
+          justify-content: center
+
+@media (max-width: 400px)
+  .footer_social_links
+    width: 300px
