@@ -1,54 +1,59 @@
-'use client'
-import {useParams, usePathname} from "next/navigation";
-import {useTypedSelector} from "@/hooks/useTypedSelector";
-import {useActions} from "@/hooks/useActions";
 import {IProduct} from "@/types/getAllProducts";
-import {useState} from "react";
 import "./single_product.sass"
 import SingleProduct from "@/componens/SingleProduct/SingleProduct";
+import {Metadata} from "next";
 
 
-function setLocalStorage(name: string, id: string, count: number, localeStorageItems: any) {
-    localStorage.setItem(name, JSON.stringify({
-        id: id,
-        count: count
-    }))
-    localeStorageItems()
+
+
+
+export async function generateMetadata ({params}): Promise<Metadata> {
+    const res = await fetch(`https://new-gunpowder-server.vercel.app/api/getOneProduct?product=${params?.slug}`)
+    const data: IProduct = await res.json()
+    return {
+        title: data.productName,
+        description: data.productDescription,
+        openGraph: {
+            title: data.productName,
+            description: data.productDescription,
+            type: "article",
+            locale: "uk_UA",
+            url: `https://novyi-poroh.com/single_product/${params?.slug}`,
+            siteName: "Новий порох",
+            images: [
+                {
+                    url: data.img
+                }
+            ]
+        }
+    }
 }
 
-const Page = () => {
-    const [count, setCount ] = useState(1)
-    const {slug} = useParams()
-    const {products} = useTypedSelector(state => state.allProducts)
-    const {modalActiveMenuActionsTrue, modalActiveBasketActionsTrue, localeStorageItems} = useActions()
-    let product: IProduct[] = []
-    if (products.length !== 0) {
-        product = products.filter(item => {
-            if (item._id == slug) return item
-        })
-    }
-    if (products.length == 0) {
-        return (
-            <div></div>
+
+
+export const productData = async (id_product) => {
+    const res = await fetch(`https://new-gunpowder-server.vercel.app/api/getOneProduct?product=${id_product}`, {
+        cache: "force-cache",
+        next: {
+            revalidate: 500
+        }
+    })
+    const data = await res.json()
+    return data;
+}
+
+const Page = async ({params}) => {
+    const product: IProduct = await productData(params?.slug);
+    return (
+            <SingleProduct
+                name={product.productName}
+                img={product.img}
+                _id={product._id}
+                productDescription={product.productDescription}
+                price={product.price}
+                productLink={product.productLink}
+            />
         );
-    } else {
-        return (
-          <SingleProduct
-              name={product[0].productName}
-              img={product[0].img}
-              _id={product[0]._id}
-              productDescription={product[0].productDescription}
-              price={product[0].price}
-              productLink={product[0].productLink}
-              count={count}
-              setCount={setCount}
-              setLocalStorage={setLocalStorage}
-              localeStorageItems={localeStorageItems}
-              modalActiveBasketActionsTrue={modalActiveBasketActionsTrue}
-              modalActiveMenuActionsTrue={modalActiveMenuActionsTrue}
-          />
-        );
-    }
 };
 
 export default Page;

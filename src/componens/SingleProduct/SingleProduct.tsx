@@ -1,9 +1,6 @@
-import {FC} from "react";
-import {Metadata} from "next";
-
-let nameMetadata = ""
-let descriptionMetadata = ""
-
+'use client'
+import {FC, useState} from "react";
+import {useActions} from "@/hooks/useActions";
 
 
 interface ISingleProduct {
@@ -13,15 +10,18 @@ interface ISingleProduct {
     productDescription: string,
     price: string,
     productLink: string,
-    count: number,
-    setCount: (count: number) => void,
-    setLocalStorage: any,
-    localeStorageItems: any,
-    modalActiveBasketActionsTrue: () => void,
-    modalActiveMenuActionsTrue: () => void,
 
 
 }
+
+function setLocalStorage(name: string, id: string, count: number, localeStorageItems: any) {
+    localStorage.setItem(name, JSON.stringify({
+        id: id,
+        count: count
+    }))
+    localeStorageItems()
+}
+
 
 
 const SingleProduct: FC<ISingleProduct> = ({
@@ -31,17 +31,10 @@ const SingleProduct: FC<ISingleProduct> = ({
                                                img,
                                                price,
                                                _id,
-                                               count,
-                                               setCount,
-                                               setLocalStorage,
-                                               localeStorageItems,
-                                               modalActiveMenuActionsTrue,
-                                               modalActiveBasketActionsTrue
-
 
 }) => {
-    nameMetadata = name
-    descriptionMetadata = productDescription
+    const [count, setCount ] = useState(1)
+    const {modalActiveMenuActionsTrue, modalActiveBasketActionsTrue, localeStorageItems} = useActions()
     return (
         <div className={'single_product_page'}>
             <div className="container">
