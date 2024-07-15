@@ -31,19 +31,14 @@ export async function generateMetadata ({params}): Promise<Metadata> {
 
 
 
-export const productData = async (id_product) => {
-    const res = await fetch(`https://new-gunpowder-server.vercel.app/api/getOneProduct?product=${id_product}`, {
+const Page = async ({params}) => {
+    const res = await fetch(`https://new-gunpowder-server.vercel.app/api/getOneProduct?product=${params?.slug}`, {
         cache: "force-cache",
         next: {
             revalidate: 500
         }
     })
-    const data = await res.json()
-    return data;
-}
-
-const Page = async ({params}) => {
-    const product: IProduct = await productData(params?.slug);
+    const product: IProduct = await res.json()
     return (
             <SingleProduct
                 name={product.productName}
