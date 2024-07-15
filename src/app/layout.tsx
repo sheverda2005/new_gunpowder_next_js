@@ -26,7 +26,12 @@ export const metadata: Metadata = {
       type: "website",
       locale: "uk_UA",
       url: "https://novyi-poroh.com/",
-      siteName: "Новий порох"
+      siteName: "Новий порох",
+      images: [
+          {
+              url: "/image/favicon.svg"
+          }
+      ]
   }
 };
 
