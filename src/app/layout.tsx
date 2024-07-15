@@ -29,7 +29,7 @@ export const metadata: Metadata = {
       siteName: "Новий порох",
       images: [
           {
-              url: "/image/favicon.svg"
+              url: "image/favicon.svg"
           }
       ]
   }
