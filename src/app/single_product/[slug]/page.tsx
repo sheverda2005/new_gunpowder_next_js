@@ -3,11 +3,16 @@ import "./single_product.sass"
 import SingleProduct from "@/componens/SingleProduct/SingleProduct";
 import {Metadata} from "next";
 
+interface IParams {
+    params: {
+        slug: string;
+    }
+}
 
 
 
 
-export async function generateMetadata ({params}): Promise<Metadata> {
+export async function generateMetadata ({params}: IParams): Promise<Metadata> {
     const res = await fetch(`https://new-gunpowder-server.vercel.app/api/getOneProduct?product=${params?.slug}`)
     const data: IProduct = await res.json()
     return {
@@ -26,12 +31,6 @@ export async function generateMetadata ({params}): Promise<Metadata> {
                 }
             ]
         }
-    }
-}
-
-interface IParams {
-    params: {
-        slug: string;
     }
 }
 
