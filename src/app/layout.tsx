@@ -9,6 +9,7 @@ import Error from "@/componens/Error/Error";
 const inter = Jost({ subsets: ["latin"]});
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://novyi-poroh.com/"),
   title: {
       default: "Новий порох",
       template: "%s - Новий порох"
@@ -16,6 +17,17 @@ export const metadata: Metadata = {
   description: "Продаж військових товарів, РЕБ індивідульний, Електронна розтяжка,  Ініціатор поверхневого підриву, Ініціатор підриву за зміною магнітного поля",
   keywords: "РЕБ, РЕБ індивідульний, РЕБ купити, Електронна розтяжка, Елетронна розтяжка купити, Індикатор поверхневого підриву, Індикатор поверхневого підриву купити, Ініціатор підриву за зміною магнітного поля купити",
   icons: "image/favicon.svg",
+  openGraph: {
+      title: {
+          default: "Новий порох",
+          template: "%s - Новий порох"
+      },
+      description: "Продаж військових товарів, РЕБ індивідульний, Електронна розтяжка,  Ініціатор поверхневого підриву, Ініціатор підриву за зміною магнітного поля",
+      type: "website",
+      locale: "uk_UA",
+      url: "https://novyi-poroh.com/",
+      siteName: "Новий порох"
+  }
 };
 
 export default function RootLayout({
