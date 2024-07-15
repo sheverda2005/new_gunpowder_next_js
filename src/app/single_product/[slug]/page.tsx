@@ -30,7 +30,9 @@ export async function generateMetadata ({params}): Promise<Metadata> {
 }
 
 interface IParams {
-    id: string
+    params: {
+        slug: string;
+    }
 }
 
 
