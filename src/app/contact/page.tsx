@@ -1,6 +1,9 @@
 import PhoneInput from "react-telephone-input";
 import "./contacs.sass"
 import {Metadata} from "next";
+import {useTypedSelector} from "@/hooks/useTypedSelector";
+import {useEffect} from "react";
+import InputsComponens from "@/componens/ContactComponens/InputsComponens";
 
 export const metadata: Metadata = {
     title: "Контакти",
@@ -8,12 +11,6 @@ export const metadata: Metadata = {
 }
 
 const ContactPage = () => {
-    // const {inputFeedbackName, inputFeedbackNumber, inputFeedbackEmail, inputFeedbackMessage, confirmFeedbackMessage, clearFeedBackData} = useActions()
-    // const {name, number, message, email, loading, success} = useTypedSelector(state => state.feedback)
-    // useEffect(()=> {
-    //     window.scrollTo(0,0);
-    //     clearFeedBackData()
-    // }, [])
     return (
         <div className={"contact_page"} >
             <div className="container">
@@ -53,41 +50,7 @@ const ContactPage = () => {
                         </div>
                         <div className="feedback">
                             <h2>Зворотній зв'зок</h2>
-                            <div className="feedback_inputs">
-                                <div className="feedback_inputs_userData">
-                                {/*    <input  placeholder={"Ім'я"} type="text"/>*/}
-
-                                {/*    <PhoneInput*/}
-                                {/*        value={number}*/}
-                                {/*        defaultCountry="ua"*/}
-                                {/*        onlyCountries={['ua']}*/}
-                                {/*        placeholder={"Телефон"}*/}
-                                {/*        onChange={(event: any) => {*/}
-                                {/*            inputFeedbackNumber(event)*/}
-                                {/*        }}*/}
-                                {/*    />*/}
-                                {/*    <input onChange={(event)=> {*/}
-                                {/*        inputFeedbackEmail(event.target.value)*/}
-                                {/*    }} value={email}  placeholder={"Email"} type="email"/>*/}
-                                {/*</div>*/}
-                                {/*<div className="feedback_inputs_massage">*/}
-                                {/*    <textarea onChange={(event)=> {*/}
-                                {/*        inputFeedbackMessage(event.target.value)*/}
-                                {/*    }} value={message} placeholder={"Повідомлення"} />*/}
-                                {/*</div>*/}
-                                {/*<div className="button_send_message">*/}
-                                {/*    {loading ? <Spinner/>*/}
-                                {/*        :*/}
-                                {/*        success ? <div className={"send_message_done"} >*/}
-                                {/*                Ваше повідомлення відправлено*/}
-                                {/*            </div> :*/}
-                                {/*            <button onClick={() => {*/}
-                                {/*                confirmFeedbackMessage(name, number, email, message)*/}
-                                {/*            }}>Надіслати*/}
-                                {/*            </button>*/}
-                                {/*    }*/}
-                                </div>
-                            </div>
+                            <InputsComponens/>
                         </div>
                     </div>
                 </div>

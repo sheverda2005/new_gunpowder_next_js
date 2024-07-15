@@ -16,6 +16,14 @@ header {
   padding: 0;
   margin: 30px;
 }
+.header_wrapper .header_options ul a {
+  color: white;
+  transition: all 0.3s ease;
+}
+.header_wrapper .header_options ul a:hover {
+  color: #c5c5c5;
+  transition: all 0.3s ease;
+}
 .header_wrapper .header_options ul li {
   padding: 12px 0;
   color: white;
@@ -24,10 +32,6 @@ header {
   font-size: 14px;
   transition: all 0.3s ease;
   cursor: pointer;
-}
-.header_wrapper .header_options ul li:hover {
-  color: #c5c5c5;
-  transition: all 0.3s ease;
 }
 .header_wrapper .header_options ul li span {
   margin-left: 10px;

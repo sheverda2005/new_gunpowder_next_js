@@ -5,12 +5,18 @@ import {useTypedSelector} from "@/hooks/useTypedSelector";
 import {useActions} from "@/hooks/useActions";
 import ModalMenu from "@/componens/NavBar/ModalMenu/ModalMenu";
 import BurgerMenu from "@/componens/NavBar/BurgerMenu/BurgerMenu";
+import {useEffect} from "react";
 
 
 const NavBar = () => {
     const {active, profileActive} = useTypedSelector(state => state.modalMenu.modalMenu)
     const {activeSearch} = useTypedSelector(state => state.search.searchMenu)
     const {modalActiveMenuActionsTrue, searchMenuModalTrue, modalActiveProfileActionsTrue, modalActiveBasketActionsTrue} = useActions()
+    const {getAllProducts, localeStorageItems} = useActions()
+    useEffect(()=> {
+        getAllProducts()
+        localeStorageItems()
+    }, [])
     return (
         <nav>
             <ModalMenu title={profileActive ? "Увійти": "Кошик"}  active={active} />
@@ -71,12 +77,12 @@ const NavBar = () => {
                                 <img className={"down_arrow"} src="/image/down-arrow.svg" alt="down-arrow"/>
                                 <div className="drop_down_menu">
                                     <div className="drop_down_menu_content">
-                                        <Link href={'/about_us'}>
+                                        <Link id={'drop_down_link'} href={'/about_us'}>
                                             <div className="drop_down_menu_item">
                                                 Про нас
                                             </div>
                                         </Link>
-                                        <Link href={'/delivery_payment'}>
+                                        <Link id={'drop_down_link'} href={'/delivery_payment'}>
                                             <div className="drop_down_menu_item">
                                                 Доставка і оплата
                                             </div>

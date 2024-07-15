@@ -5,6 +5,7 @@ import {useTypedSelector} from "@/hooks/useTypedSelector";
 import {IProduct} from "@/types/getAllProducts";
 import {useActions} from "@/hooks/useActions";
 import Link from "next/link";
+import Spinner from "@/componens/Spinner/Spinner";
 
 function getAllProductsLocalStorage() {
     let allItems = []
@@ -73,11 +74,11 @@ const ModalBasketMenu = () => {
         <div className={"modal_basket_menu"}>
             <div className="basket_menu_content">
                 <div className="basket_menu_items">
-                    {/*{loading ? <Spinner/> :*/}
-                    {/*    storageItems.map(item => {*/}
-                    {/*        return <ModalBasketMenuItem deleteItem={setDeleteItem} item={item}/>*/}
-                    {/*    })*/}
-                    {/*}*/}
+                    {loading ? <Spinner/> :
+                        storageItems.map(item => {
+                            return <ModalBasketMenuItem deleteItem={setDeleteItem} item={item}/>
+                        })
+                    }
                 </div>
             </div>
             {!loading ? <div className="basket_buy_options">

@@ -4,6 +4,7 @@ import "./global.sass"
 import NavBar from "@/componens/NavBar/NavBar";
 import Footer from "@/componens/Footer/Footer";
 import {StoreProvider} from "@/store/StoreProvider";
+import Error from "@/componens/Error/Error";
 
 const inter = Jost({ subsets: ["latin"]});
 
@@ -24,6 +25,7 @@ export default function RootLayout({
           <html lang="en">
           <body className={inter.className}>
           <NavBar/>
+          <Error/>
           {children}
           <Footer/>
           </body>

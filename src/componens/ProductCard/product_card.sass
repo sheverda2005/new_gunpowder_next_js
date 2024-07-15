@@ -1,0 +1,56 @@
+.product_card
+  display: flex
+  flex-direction: column
+  align-items: center
+  align-content: space-between
+  justify-content: space-between
+  margin: 0 10px
+  cursor: pointer
+  padding: 15px
+  box-shadow: none
+  transition: all 0.3s ease
+  position: relative
+  width: 25%
+  min-width: 200px
+  &:hover
+    border-radius: 3px
+    box-shadow: 0 0 15px 0 rgb(0, 0, 0, 0.2)
+    transition: all 0.3s ease
+    img
+      transform: scale(1.05)
+      transition: all 0.3s ease
+  p
+    color: rgb(29, 29, 29)
+    font-size: 13px
+    text-transform: uppercase
+    font-weight: 500
+  span
+    padding: 15px 0
+    font-size: 15px
+    color: #1d1d1d
+    font-weight: 500
+
+.svg_items
+  img
+    height: 25px
+    padding-right: 12px
+
+.product_photo
+  overflow: hidden
+  img
+    width: 100%
+    height: auto
+    transform: scale(1)
+    transition: all 0.3s ease
+
+.product_title
+  margin-bottom: 10px
+
+@media (max-width: 768px)
+  .product_photo
+    img
+      width: 80%
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: 0 auto

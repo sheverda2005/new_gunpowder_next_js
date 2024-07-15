@@ -1,0 +1,36 @@
+.error {
+  position: fixed;
+  top: 25%;
+  right: 5%;
+  z-index: 90;
+  background-color: white;
+  padding: 10px 20px;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
+  color: #f40909;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .error {
+    top: 10%;
+    right: 5%;
+  }
+}
+@media (max-width: 426px) {
+  .error {
+    top: 5%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 70%;
+  }
+}
+@media (max-width: 390px) {
+  .error {
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=error.css.map */

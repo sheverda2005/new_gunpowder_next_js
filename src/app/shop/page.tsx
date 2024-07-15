@@ -1,5 +1,6 @@
 import "./shop.sass"
 import {Metadata} from "next";
+import ProductCard from "@/componens/ProductCard/ProdutcCard";
 
 
 export const metadata: Metadata = {
@@ -8,7 +9,21 @@ export const metadata: Metadata = {
     keywords: "РЕБ, РЕБ індивідульний, РЕБ купити, Електронна розтяжка, Елетронна розтяжка купити, Індикатор поверхневого підриву, Індикатор поверхневого підриву купити, Ініціатор підриву за зміною магнітного поля купити",
 }
 
-const ShopPage = () => {
+
+export const fetchData = async () => {
+    const res = await fetch("https://new-gunpowder-server.vercel.app/api/getAllProducts", {
+        cache: "force-cache",
+        next: {
+            revalidate: 500
+        }
+    })
+    const data = await res.json()
+    return data;
+}
+
+const ShopPage = async () => {
+    const products = await fetchData()
+
     return (
         <div className={"shop_page"} >
             <div className="container">
@@ -52,9 +67,9 @@ const ShopPage = () => {
                             {/*</div>*/}
                         </div>
                         <div className="shop_content_items_list">
-                            {/*{products.map(product => {*/}
-                            {/*    return <ProductCard key={product._id} _id={product._id} img={product.img} productDescription={product.productDescription} productName={product.productName} price={product.price}/>*/}
-                            {/*})}*/}
+                            {products.map(product => {
+                                return <ProductCard key={product._id} _id={product._id} img={product.img} productDescription={product.productDescription} productName={product.productName} price={product.price}/>
+                            })}
                         </div>
                     </div>
                 </div>

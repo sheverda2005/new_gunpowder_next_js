@@ -1,0 +1,165 @@
+.single_product_main_img
+  img
+    height: 600px
+
+
+.single_product_content
+  display: flex
+
+.single_product_title
+  font-size: 24px
+
+.single_product_price
+  font-size: 150%
+  font-weight: 500
+  margin: 20px 0
+
+.single_product_text
+  margin-top: 50px
+  margin-left: 50px
+
+.single_product_producer
+  margin: 20px 0
+
+.single_product_count
+  display: flex
+  justify-content: space-between
+  font-size: 20px
+  border: 1px solid rgb(0, 0, 0, 0.2)
+  border-radius: 4px
+  padding: 10px 15px
+  width: 14%
+
+.single_product_title.adaptive
+  display: none
+
+.single_product_buy_options
+  display: flex
+  align-items: stretch
+  width: 80%
+  button
+    margin-left: 20px
+    width: 70%
+    cursor: pointer
+    border: 1px solid #E5DBCF
+    background-color: #E5DBCF
+    text-transform: uppercase
+    color: #283c28
+    font-weight: 600
+    font-size: 14px
+    letter-spacing: 1px
+    transition: all 0.3s ease
+    &:hover
+      background-color: white
+      transition: all 0.3s ease
+
+.single_product_svg_items
+  width: 30%
+  display: flex
+  margin-left: 10px
+  img
+    max-width: 30px
+    margin: 0 10px
+
+.product_description
+  margin-top: 30px
+  font-size: 20px
+  p
+    margin-top: 10px
+    font-size: 16px
+  a
+    color: #575757
+    text-decoration: underline
+
+.single_product_count_item.minus
+  &::selection
+    background-color: transparent
+    color: inherit
+  cursor: pointer
+  outline: none
+
+.single_product_count_item.plus
+  &::selection
+    background-color: transparent
+    color: inherit
+  cursor: pointer
+  outline: none
+
+.single_product_svg_items
+  display: none
+
+@media (max-width: 1180px)
+
+
+
+@media (max-width: 1100px)
+  .single_product_buy_options
+    width: 100%
+  .single_product_buy_options
+    button
+      min-width: 200px
+
+
+@media (max-width: 950px)
+  .single_product_content
+    align-items: center
+  .single_product_main_img
+    img
+      height: 500px
+
+@media (max-width: 830px)
+  .single_product_title.adaptive
+    display: block
+  .single_product_content
+    flex-direction: column
+  .single_product_text
+    margin: 0
+    .single_product_title
+      display: none
+  .single_product_main_img
+    img
+      height: 400px
+  .single_product_title.adaptive
+    text-align: center
+    margin: 30px 0
+  .single_product_producer
+    text-align: center
+  .single_product_price
+    text-align: center
+  .single_product_svg_items
+    width: 100px
+    margin: 20px 0
+  .product_description
+    p
+      text-align: center
+  .single_product_count
+    min-width: 80px
+  .single_product_buy_options
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    button
+      max-width: 460px
+      padding: 16px 0
+  .product_description_title
+    text-align: center
+  .product_description
+    margin-top: 10px
+
+@media (max-width: 460px)
+  .single_product_buy_options
+    button
+      width: 70%
+      min-width: 100px
+  .single_product_count
+    min-width: 50px
+    width: 15%
+
+@media (max-width: 363px)
+  .single_product_buy_options
+    button
+      margin-left: 0
+      width: 100%
+      margin: 20px 0
+  .single_product_count
+    width: 20%

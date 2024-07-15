@@ -1,0 +1,25 @@
+.target_sensors_titles {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20px;
+}
+.target_sensors_titles .title {
+  font-weight: 400;
+  font-size: 35px;
+}
+
+.shop_content_items_list_target_sensors {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media (max-width: 750px) {
+  .shop_content_items_list_target_sensors {
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=targetSensors.css.map */

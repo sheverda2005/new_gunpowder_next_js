@@ -18,6 +18,7 @@ const ModalBasketMenuItem: FC<IMenuItem> = ({item, deleteItem}) => {
             }
         }
     })
+    console.log(ourProducts.product)
     return (
         <div className={"modal_basket_menu_item"} >
             <div className="modal_basket_menu_item_content">
