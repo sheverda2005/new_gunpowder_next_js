@@ -29,9 +29,12 @@ export async function generateMetadata ({params}): Promise<Metadata> {
     }
 }
 
+interface IParams {
+    id: string
+}
 
 
-const Page = async ({params}) => {
+const Page = async ({params}: IParams) => {
     const res = await fetch(`https://new-gunpowder-server.vercel.app/api/getOneProduct?product=${params?.slug}`, {
         cache: "force-cache",
         next: {
