@@ -2,6 +2,7 @@ import React from 'react';
 import "./catalog_of_goods.sass"
 import Spinner from "../../Spinner/Spinner";
 import ProductCard from "@/componens/ProductCard/ProdutcCard";
+import {IProduct} from "@/types/getAllProducts";
 
 
 export const fetchData = async () => {
@@ -16,7 +17,7 @@ export const fetchData = async () => {
 }
 
 const CatalogOfGoods = async () => {
-    const products = await fetchData()
+    const products: IProduct[] = await fetchData()
     return (
         <section className={"catalog_of_goods"} >
             <h2 className={"section_title"} >
