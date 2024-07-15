@@ -22,7 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: new Date(),
     }))
 
-    
+
     return [
         {
             url: 'https://novyi-poroh.com/',
@@ -30,6 +30,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         },
         {
             url: 'https://novyi-poroh.com/shop',
+            lastModified: new Date(),
+        },
+        {
+            url: 'https://novyi-poroh.com/about_us',
+            lastModified: new Date(),
+        },
+        {
+            url: 'https://novyi-poroh.com/shop/delivery_payment',
+            lastModified: new Date(),
+        },
+        {
+            url: 'https://novyi-poroh.com/contact',
+            lastModified: new Date(),
+        },
+        {
+            url: 'https://novyi-poroh.com/target_sensors',
+            lastModified: new Date(),
+        },
+        {
+            url: 'https://novyi-poroh.com/confirm_order',
             lastModified: new Date(),
         },
         ...productsUrls
