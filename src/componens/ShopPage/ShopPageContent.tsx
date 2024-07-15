@@ -1,4 +1,5 @@
 import ProductCard from "@/componens/ProductCard/ProdutcCard";
+import {IProduct} from "@/types/getAllProducts";
 
 
 
@@ -17,7 +18,7 @@ export const productData = async () => {
 
 
 const ShopPage = async () => {
-    const products = await productData()
+    const products: IProduct[] = await productData()
 
     return (
         <div className={"shop_page"} >
