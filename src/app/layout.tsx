@@ -5,6 +5,7 @@ import NavBar from "@/componens/NavBar/NavBar";
 import Footer from "@/componens/Footer/Footer";
 import {StoreProvider} from "@/store/StoreProvider";
 import Error from "@/componens/Error/Error";
+import {Analytics} from "@vercel/analytics/next";
 
 const inter = Jost({ subsets: ["latin"]});
 
@@ -36,15 +37,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <StoreProvider>
-          <html lang="en">
-          <body className={inter.className}>
-          <NavBar/>
-          <Error/>
-          {children}
-          <Footer/>
-          </body>
-          </html>
-      </StoreProvider>
+      <>
+          <StoreProvider>
+            <html lang="en">
+                <body className={inter.className}>
+                    <NavBar/>
+                    <Error/>
+                    {children}
+                    <Footer/>
+                </body>
+             </html>
+         </StoreProvider>
+          <Analytics/>
+      </>
   );
 }
