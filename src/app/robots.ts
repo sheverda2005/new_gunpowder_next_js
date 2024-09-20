@@ -9,4 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         },
         sitemap: 'https://novyi-poroh.com/sitemap.xml',
     }
+
+
 }
