@@ -95,7 +95,10 @@ const SingleProduct: FC<ISingleProduct> = ({
                                     Інструкція
                                 </div>
                                 <p>
-                                    <a href={productLink}>Відеоінструкція</a>
+                                    {/*<a href={productLink}>Відеоінструкція</a>*/}
+                                    <iframe src={`https://www.youtube.com/embed/${productLink}`}
+                                            frameBorder="0" allowFullScreen></iframe>
+
                                 </p>
                             </div>
                         }
