@@ -11,10 +11,11 @@ import {LIST_OF_DEPARTMENTSTypes, ListOfDepartmentsActions} from "../../types/li
 
 
 export function addCitiesNovaPoshta (city_address_input: string) {
+    console.log(city_address_input)
     return async (dispatch: Dispatch<INovaPoshtaCityActions>) => {
         try {
             const req = await axios.post("https://api.novaposhta.ua/v2.0/json/", {
-                apiKey: "70c1d39bfeee79ae18eb611e10e7e2a3",
+                apiKey: "42dc59cf2cc1375fe2b27a31b0014b04",
                 modelName: "Address",
                 calledMethod: "searchSettlements",
                 methodProperties: {
@@ -40,7 +41,7 @@ export function chosenCityNovaPoshta (chosenCity: ICityNovaPoshta) {
             payload: chosenCity
         })
         const req = await axios.post("https://api.novaposhta.ua/v2.0/json/", {
-            apiKey: "70c1d39bfeee79ae18eb611e10e7e2a3",
+            apiKey: "42dc59cf2cc1375fe2b27a31b0014b04",
             modelName: "Address",
             calledMethod: "getWarehouses",
             methodProperties: {
@@ -58,7 +59,7 @@ export function chosenCityNovaPoshta (chosenCity: ICityNovaPoshta) {
 export function addressDepartmentNovaPoshta (input_data: string, ref: string | undefined) {
     return async (dispatch: Dispatch<ListOfDepartmentsActions>) => {
         const req = await axios.post("https://api.novaposhta.ua/v2.0/json/", {
-            apiKey: "70c1d39bfeee79ae18eb611e10e7e2a3",
+            apiKey: "42dc59cf2cc1375fe2b27a31b0014b04",
             modelName: "Address",
             calledMethod: "getWarehouses",
             methodProperties: {
